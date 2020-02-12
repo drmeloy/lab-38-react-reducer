@@ -1,4 +1,4 @@
-import { isTired, isHyper, isEducated, isHungry, getFace } from '../containers/Moods';
+import { isTired, isHyper, isEducated, isHungry, getFace } from './faceSelectors';
 
 
 describe('face selectors', () => {

@@ -3,23 +3,30 @@
 exports[`MoodsFn matches a snapshot 1`] = `
 <Fragment>
   <Controls
-    actions={
+    dispatch={
       Array [
         Object {
-          "count": undefined,
+          "count": 0,
+          "func": [Function],
+          "text": "Drink Coffee",
         },
         Object {
-          "count": undefined,
+          "count": 0,
+          "func": [Function],
+          "text": "Snack",
         },
         Object {
-          "count": undefined,
+          "count": 0,
+          "func": [Function],
+          "text": "Nap",
         },
         Object {
-          "count": undefined,
+          "count": 0,
+          "func": [Function],
+          "text": "Study",
         },
       ]
     }
-    handleSelection={[Function]}
   />
   <Face
     emoji="😠"
