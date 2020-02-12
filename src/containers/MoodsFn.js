@@ -13,11 +13,36 @@ const MoodsFn = () => {
     studies: 0
   });
   const face = getFace(state);
+
+  const [drinkCoffee, eatSnack, takeNap, study] = allActions;
+
+  const dispatchObj = [
+    {
+      text: 'Drink Coffee',
+      func: () => dispatch(drinkCoffee()),
+      count: state.coffees
+    },
+    {
+      text: 'Snack',
+      func: () => dispatch(eatSnack()),
+      count: state.snacks
+    },
+    {
+      text: 'Nap',
+      func: () => dispatch(takeNap()),
+      count: state.naps
+    },
+    {
+      text: 'Study',
+      func: () => dispatch(study()),
+      count: state.studies
+    }
+  ];
   
 
   return (
     <>
-      <Controls actions={controlActions} handleSelection={dispatch} />
+      <Controls dispatch={dispatchObj} />
       <Face emoji={face} />
     </>
   );

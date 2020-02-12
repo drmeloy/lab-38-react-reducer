@@ -26,3 +26,5 @@ export const study = () => ({
   text: 'Study',
   stateName: 'studies'
 });
+
+export const allActions = [drinkCoffee, eatSnack, takeNap, study];
