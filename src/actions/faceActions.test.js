@@ -1,4 +1,4 @@
-import { drinkCoffee, DRINK_COFFEE, EAT_SNACK, eatSnack } from './faceActions';
+import { drinkCoffee, DRINK_COFFEE, EAT_SNACK, eatSnack, TAKE_NAP, takeNap, STUDY, study } from './faceActions';
 
 
 describe('face actions', () => {
@@ -20,12 +20,21 @@ describe('face actions', () => {
     });
   });
 
-  it('creats a TAKE_NAP action', () => {
+  it('creates a TAKE_NAP action', () => {
     const action = takeNap();
     expect(action).toEqual({
       type: TAKE_NAP,
       text: 'Nap',
       stateName: 'naps'
-    })
-  }
+    });
+  });
+
+  it('creates a STUDY action', () => {
+    const action = study();
+    expect(action).toEqual({
+      type: STUDY,
+      text: 'Study',
+      stateName: 'studies'
+    });
+  });
 });
