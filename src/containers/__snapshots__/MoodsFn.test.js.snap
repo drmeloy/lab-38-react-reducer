@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MoodsFn matches a snapshot 1`] = `
+<Fragment>
+  <Controls
+    actions={
+      Array [
+        Object {
+          "count": undefined,
+        },
+        Object {
+          "count": undefined,
+        },
+        Object {
+          "count": undefined,
+        },
+        Object {
+          "count": undefined,
+        },
+      ]
+    }
+    handleSelection={[Function]}
+  />
+  <Face
+    emoji="😠"
+  />
+</Fragment>
+`;
