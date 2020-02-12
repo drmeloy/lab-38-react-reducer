@@ -5,33 +5,23 @@ export const STUDY = 'STUDY';
 export const EXERCISE = 'EXERCISE';
 
 export const drinkCoffee = () => ({
-  type: DRINK_COFFEE,
-  text: 'Drink Coffee',
-  stateName: 'coffees'
+  type: DRINK_COFFEE
 });
 
 export const eatSnack = () => ({
-  type: EAT_SNACK,
-  text: 'Snack',
-  stateName: 'snacks'
+  type: EAT_SNACK
 });
 
 export const takeNap = () => ({
-  type: TAKE_NAP,
-  text: 'Nap',
-  stateName: 'naps'
+  type: TAKE_NAP
 });
 
 export const study = () => ({
-  type: STUDY,
-  text: 'Study',
-  stateName: 'studies'
+  type: STUDY
 });
 
 export const exercise = () => ({
-  type: EXERCISE,
-  text: 'Exercise',
-  stateName: 'exercises'
+  type: EXERCISE
 });
 
 export const allActions = [drinkCoffee, eatSnack, takeNap, study, exercise];

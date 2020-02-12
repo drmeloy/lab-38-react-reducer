@@ -25,6 +25,11 @@ exports[`MoodsFn matches a snapshot 1`] = `
           "func": [Function],
           "text": "Study",
         },
+        Object {
+          "count": 0,
+          "func": [Function],
+          "text": "Exercise",
+        },
       ]
     }
   />
