@@ -5,13 +5,13 @@ export const isHungry = state => state.snacks < 1;
 export const isSwoll = state => state.exercises > 9;
 
 export const getFace = state => {
+  if(isSwoll(state)) return '💪';
   if(isTired(state) && isHungry(state)) return '😠';
   if(isHyper(state) && isHungry(state)) return '😱';
   if(isTired(state)) return '😴';
   if(isHyper(state)) return '🙀';
   if(isEducated(state)) return '😲';
   if(isHungry(state)) return '😡';
-  if(isSwoll(state)) return '💪';
 
   return '😀';
 };

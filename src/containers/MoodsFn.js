@@ -10,11 +10,12 @@ const MoodsFn = () => {
     coffees: 0,
     snacks: 0,
     naps: 0,
-    studies: 0
+    studies: 0,
+    exercises: 0
   });
   const face = getFace(state);
 
-  const [drinkCoffee, eatSnack, takeNap, study] = allActions;
+  const [drinkCoffee, eatSnack, takeNap, study, exercise] = allActions;
 
   const dispatchObj = [
     {
@@ -36,6 +37,11 @@ const MoodsFn = () => {
       text: 'Study',
       func: () => dispatch(study()),
       count: state.studies
+    },
+    {
+      text: 'Exercise',
+      func: () => dispatch(exercise()),
+      count: state.exercises
     }
   ];
   
