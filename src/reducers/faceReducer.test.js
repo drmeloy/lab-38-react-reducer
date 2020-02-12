@@ -1,5 +1,5 @@
 import reducer from './faceReducer';
-import { drinkCoffee, eatSnack, takeNap } from '../actions/faceActions';
+import { drinkCoffee, eatSnack, takeNap, study } from '../actions/faceActions';
 
 describe('face reducer', () => {
   it('does nothing when given an unexpected action', () => {
@@ -27,5 +27,12 @@ describe('face reducer', () => {
     const initialState = { naps: 1 };
     const newState = reducer(initialState, action);
     expect(newState).toEqual({ naps: 2 });
+  });
+
+  it('handles the STUDY action', () => {
+    const action = study();
+    const initialState = { studies: 1 };
+    const newState = reducer(initialState, action);
+    expect(newState).toEqual({ studies: 2 });
   });
 });
