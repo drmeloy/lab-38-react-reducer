@@ -1,4 +1,4 @@
-import { drinkCoffee, DRINK_COFFEE, EAT_SNACK, eatSnack, TAKE_NAP, takeNap, STUDY, study } from './faceActions';
+import { drinkCoffee, DRINK_COFFEE, EAT_SNACK, eatSnack, TAKE_NAP, takeNap, STUDY, study, EXERCISE, exercise } from './faceActions';
 
 
 describe('face actions', () => {
@@ -35,6 +35,15 @@ describe('face actions', () => {
       type: STUDY,
       text: 'Study',
       stateName: 'studies'
+    });
+  });
+
+  it('creates a EXERCISE action', () => {
+    const action = exercise();
+    expect(action).toEqual({
+      type: EXERCISE,
+      text: 'Exercise',
+      stateName: 'exercises'
     });
   });
 });

@@ -1,4 +1,4 @@
-import { isTired, isHyper, isEducated, isHungry, getFace } from './faceSelectors';
+import { isTired, isHyper, isEducated, isHungry, getFace, isSwoll } from './faceSelectors';
 
 
 describe('face selectors', () => {
@@ -34,6 +34,14 @@ describe('face selectors', () => {
     expect(isHungry({ studies: 2 })).toBeFalsy();
   });
 
+  it('knows if it is swoll', () => {
+    expect(isSwoll({ exercises: 10 })).toBeTruthy();
+  });
+
+  it('knows if it is not swoll', () => {
+    expect(isSwoll({ exercises: 9 })).toBeFalsy();
+  });
+
   it('is very angry if tired and hungry', () => {
     expect(getFace({ coffees: 0, naps: 0, snacks: 0 })).toEqual('😠');
   });
@@ -60,5 +68,9 @@ describe('face selectors', () => {
 
   it('is happy if not tired, hungry, educated, or hungry', () => {
     expect(getFace({ coffees: 1, naps: 0, snacks: 1, studies: 0 })).toEqual('😀');
+  });
+
+  it('is strong is swoll', () => {
+    expect(getFace({ exercises: 10 })).toEqual('💪');
   });
 });

@@ -2,6 +2,7 @@ export const DRINK_COFFEE = 'DRINK_COFFEE';
 export const EAT_SNACK = 'EAT_SNACK';
 export const TAKE_NAP = 'TAKE_NAP';
 export const STUDY = 'STUDY';
+export const EXERCISE = 'EXERCISE';
 
 export const drinkCoffee = () => ({
   type: DRINK_COFFEE,
@@ -27,4 +28,10 @@ export const study = () => ({
   stateName: 'studies'
 });
 
-export const allActions = [drinkCoffee, eatSnack, takeNap, study];
+export const exercise = () => ({
+  type: EXERCISE,
+  text: 'Exercise',
+  stateName: 'exercises'
+});
+
+export const allActions = [drinkCoffee, eatSnack, takeNap, study, exercise];
